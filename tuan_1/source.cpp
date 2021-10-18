@@ -108,3 +108,18 @@ void xuatSoHoangThienTrongMang(int a[], int n) {
     }
   }
 }
+
+int timKiemNhiPhan(int a[], int n, int k) {
+  int top = n - 1, bot = 0, mid;
+  do {
+    mid = (top + bot) / 2;
+    if (a[mid] == k) {
+      return mid;
+    } else if (k < a[mid]) {
+      top = mid - 1;
+    } else {
+      bot = mid + 1;
+    }
+  } while (bot <= top);
+  return -1;
+}

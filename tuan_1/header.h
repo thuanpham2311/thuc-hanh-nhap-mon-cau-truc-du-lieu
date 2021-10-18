@@ -8,7 +8,7 @@ void nhapMang(int b[], int &);
 void xuatMang(int b[], int);
 int timKiem_TuanTu(int a[], int n, int x);
 void sapXep(int a[], int n);
-bool timKiemNhiPhan(int a[], int n, int x);
+int timKiemNhiPhan(int a[], int n, int k);
 int tongPhanTuAmTrongMang(int a[], int n);
 bool kiemTraSoNguyenTo(int number);
 int diemCacSoNguyenToTrongMang(int a[], int n);
