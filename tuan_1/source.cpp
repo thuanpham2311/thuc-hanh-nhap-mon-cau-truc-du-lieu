@@ -37,11 +37,6 @@ void sapXep(int a[], int n) {
       }
 }
 
-bool timKiemNhiPhan(int a[], int n, int x) {
-  int flag = false;
-  return flag;
-}
-
 int tongPhanTuAmTrongMang(int a[], int n) {
   int sum = 0;
   for (int i = 0; i < n; i++) {
