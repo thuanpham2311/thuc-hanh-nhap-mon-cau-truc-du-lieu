@@ -2,7 +2,7 @@
 
 void khoiTao(Nodeptr &list) { list = NULL; }
 
-int isEmpty(Nodeptr list) { return (list == NULL ? 1 : 0); }
+int isEmpty(Nodeptr list) { return (list == NULL ? true : false); }
 
 Nodeptr taoNode(TYPEINFO x) {
   Nodeptr p;
@@ -39,7 +39,7 @@ void nhapDanhSachThemDau(Nodeptr &list) {
 void xuatDanhSach(Nodeptr list) {
   Nodeptr p = list;
   cout << endl;
-  while (p != NULL) {
+  while (isEmpty(p) == false) {
     cout << p->data << " ";
     p = p->link;
   }
@@ -48,7 +48,7 @@ void xuatDanhSach(Nodeptr list) {
 Nodeptr themCuoi(Nodeptr &list, TYPEINFO x) {
   Nodeptr p;
   p = taoNode(x);
-  if (list == NULL)
+  if (isEmpty(list) == true)
     list = p;
   else {
     Nodeptr q = list;
@@ -74,7 +74,7 @@ void nhapDanhSachThemCuoi(Nodeptr &list) {
 
 Nodeptr timPhanTu(Nodeptr list, TYPEINFO x) {
   Nodeptr p = list;
-  while (p != NULL) {
+  while (isEmpty(p) == false) {
     if (p->data == x) {
       return p;
     }
@@ -85,9 +85,21 @@ Nodeptr timPhanTu(Nodeptr list, TYPEINFO x) {
 
 void xoaDau(Nodeptr &list) {
   Nodeptr p;
-  if (list != NULL) {
+  if (isEmpty(list) == false) {
     p = list;
     list = p->link;
     delete p;
+  }
+}
+
+void test(Nodeptr list) {
+  Nodeptr p = list;
+
+  while (isEmpty(p) == false) {
+    if (p->data % 3 == 0) {
+      cout << p->data;
+    }
+
+    p = p->link;
   }
 }

@@ -20,3 +20,4 @@ Nodeptr themCuoi(Nodeptr& list, TYPEINFO x);
 void nhapDanhSachThemCuoi(Nodeptr& list);
 Nodeptr timPhanTu(Nodeptr list, TYPEINFO x);
 void xoaDau(Nodeptr& list);
+void test(Nodeptr list);
