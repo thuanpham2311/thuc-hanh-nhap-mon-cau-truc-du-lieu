@@ -23,5 +23,7 @@ int main() {
     cout << "\nKhông tìm thấy phần tử\n";
   }
 
+  xoaDau(list);
+
   return 0;
 }

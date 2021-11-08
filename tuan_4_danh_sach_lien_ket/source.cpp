@@ -82,3 +82,12 @@ Nodeptr timPhanTu(Nodeptr list, TYPEINFO x) {
   }
   return p;
 }
+
+void xoaDau(Nodeptr &list) {
+  Nodeptr p;
+  if (list != NULL) {
+    p = list;
+    list = p->link;
+    delete p;
+  }
+}
