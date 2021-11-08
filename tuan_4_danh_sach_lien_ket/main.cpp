@@ -24,6 +24,7 @@ int main() {
   }
 
   xoaDau(list);
+  xuatDanhSach(list);
 
   return 0;
 }

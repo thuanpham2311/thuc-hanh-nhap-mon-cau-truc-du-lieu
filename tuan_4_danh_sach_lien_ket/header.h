@@ -19,4 +19,4 @@ void xuatDanhSach(Nodeptr list);
 Nodeptr themCuoi(Nodeptr& list, TYPEINFO x);
 void nhapDanhSachThemCuoi(Nodeptr& list);
 Nodeptr timPhanTu(Nodeptr list, TYPEINFO x);
-void xoaDau(Nodeptr &list);
+void xoaDau(Nodeptr& list);
