@@ -60,15 +60,32 @@ void xoaDau(Dlist &list) {
   }
 }
 
-Nodeptr timViTriX(Dlist list, TYPEINFO x) {
+int timViTriX(Dlist list, TYPEINFO x) {
   Nodeptr p = list.first;
 
+  int count = 0;
   while (p != NULL) {
     if (p->data == x) {
-      return p;
+      break;
+    }
+    count++;
+    p = p->next;
+  }
+
+  return 0;
+}
+
+int tongPhanTuLe(Dlist list) {
+  int sum = 0;
+
+  Nodeptr p;
+
+  while (p != NULL) {
+    if (p->data % 2 == 1) {
+      sum += p->data;
     }
     p = p->next;
   }
 
-  return NULL;
+  return 0;
 }

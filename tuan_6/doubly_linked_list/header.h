@@ -23,4 +23,5 @@ void themDau(Dlist& list, TYPEINFO x);
 void nhapDanhSachThemDau(Dlist &list);
 void xuatDanhSach(Dlist list);
 void xoaDau(Dlist &list);
-Nodeptr timViTriX(Dlist list, TYPEINFO x);
+int timViTriX(Dlist list, TYPEINFO x);
+int tongPhanTuLe(Dlist list);
