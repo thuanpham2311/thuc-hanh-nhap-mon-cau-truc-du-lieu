@@ -7,9 +7,15 @@ using namespace std;
 typedef int TYPE;
 
 struct Stack {
-  int stackPointer;
+  int top;
   TYPE elem[MAX_STACK];
 };
 
-void initStack(Stack &stack);
+void initStack(Stack& stack);
 bool isEmpty(Stack stack);
+bool isFull(Stack stack);
+void push(Stack& stack, int x);
+void inputStack(Stack& stack);
+void outputStack(Stack stack);
+int pop(Stack& stack);
+int top(Stack stack);
