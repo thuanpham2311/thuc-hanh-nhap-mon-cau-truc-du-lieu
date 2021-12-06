@@ -96,3 +96,14 @@ int sum(Stack stack) {
 
   return sum;
 }
+
+void xuatPhanTuAm(Stack stack) {
+  Nodeptr p = stack.top;
+
+  while (p != NULL) {
+    if (p->data < 0) {
+      cout << p->data << " ";
+    }
+    p = p->link;
+  }
+}

@@ -24,3 +24,4 @@ void inputStack(Stack &stack);
 void outputStack(Stack stack);
 int top(Stack stack);
 int sum(Stack stack);
+void xuatPhanTuAm(Stack stack);

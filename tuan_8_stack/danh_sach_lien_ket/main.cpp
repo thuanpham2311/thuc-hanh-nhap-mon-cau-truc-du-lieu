@@ -21,7 +21,8 @@ int main() {
   cout << "\n Phần tử đầu của stack: " << top(stack) << endl;
 
   cout << "\n\n====\n\n";
-  cout << "\n Tổng các phần tử của stack: " << sum(stack) << endl;
+  cout << "\n Các phần tử của âm stack: ";
+  xuatPhanTuAm(stack);
 
   return 0;
 }
