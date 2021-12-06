@@ -46,9 +46,7 @@ void outputStack(Stack stack) {
 
 int pop(Stack& stack) {
   int x;
-  if (isEmpty(stack) == true) {
-    return -1;
-  } else {
+  if (isEmpty(stack) == false) {
     x = stack.elem[stack.top];
     stack.top--;
   }
@@ -64,4 +62,12 @@ int top(Stack stack) {
     stack.top--;
   }
   return x;
+}
+
+int sum(Stack stack) {
+  TYPE sum = 0;
+  for (int i = 0; i <= stack.top; i++) {
+    sum += stack.elem[i];
+  }
+  return sum;
 }

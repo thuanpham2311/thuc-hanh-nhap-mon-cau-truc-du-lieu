@@ -2,10 +2,10 @@
 #include <iostream>
 using namespace std;
 
-typedef int TYPEINFO;
+typedef int TYPE_INFO;
 
 struct Node {
-  TYPEINFO data;
+  TYPE_INFO data;
   Node *link;
 };
 
@@ -17,10 +17,10 @@ struct Stack {
 
 void initStack(Stack &stack);
 bool isEmpty(Stack stack);
-Nodeptr taoNode(TYPEINFO x);
-void push(Stack &stack, TYPEINFO x);
+Nodeptr taoNode(TYPE_INFO x);
+void push(Stack &stack, TYPE_INFO x);
 int pop(Stack &stack);
-int top(Stack &stack);
 void inputStack(Stack &stack);
 void outputStack(Stack stack);
-int top(Stack &stack);
+int top(Stack stack);
+int sum(Stack stack);

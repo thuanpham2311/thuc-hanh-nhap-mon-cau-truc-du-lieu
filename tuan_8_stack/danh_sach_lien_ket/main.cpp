@@ -20,5 +20,8 @@ int main() {
   cout << "\n\n====\n\n";
   cout << "\n Phần tử đầu của stack: " << top(stack) << endl;
 
+  cout << "\n\n====\n\n";
+  cout << "\n Tổng các phần tử của stack: " << sum(stack) << endl;
+
   return 0;
 }

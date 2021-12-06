@@ -10,7 +10,7 @@ bool isEmpty(Stack stack) {
   }
 }
 
-Nodeptr taoNode(TYPEINFO x) {
+Nodeptr taoNode(TYPE_INFO x) {
   Nodeptr p;
 
   p = new Node;
@@ -20,7 +20,7 @@ Nodeptr taoNode(TYPEINFO x) {
   return p;
 }
 
-void push(Stack& stack, TYPEINFO x) {
+void push(Stack& stack, TYPE_INFO x) {
   Nodeptr p;
   p = taoNode(x);
   if (isEmpty(stack))
@@ -44,28 +44,55 @@ void inputStack(Stack& stack) {
 
 void outputStack(Stack stack) {
   Nodeptr p = stack.top;
+
+  // TYPE_INFO array[100];
+  // int i = 0;
+
   while (p != NULL) {
     cout << p->data << " ";
+    // array[i] = p->data;
+    // i++;
     p = p->link;
   }
+
+  // while (i != -1) {
+  // cout << array[i] << " ";
+  // i--;
+  // }
 }
 
 int pop(Stack& stack) {
   Nodeptr p;
-  TYPEINFO x;
+  TYPE_INFO x;
 
-  if (isEmpty(stack) == false) {
-    p = stack.top;
-    stack.top = p->link;
+  p = stack.top;
+  stack.top = p->link;
+  x = p->data;
+  delete p;
+
+  return x;
+}
+
+int top(Stack stack) {
+  Nodeptr p = stack.top;
+  TYPE_INFO x;
+
+  while (p != NULL) {
     x = p->data;
-    delete p;
-    return x;
+    p = p->link;
   }
 
   return x;
 }
 
-int top(Stack& stack) {
+int sum(Stack stack) {
+  TYPE_INFO sum = 0;
   Nodeptr p = stack.top;
-  return p->data;
+
+  while (p != NULL) {
+    sum += p->data;
+    p = p->link;
+  }
+
+  return sum;
 }

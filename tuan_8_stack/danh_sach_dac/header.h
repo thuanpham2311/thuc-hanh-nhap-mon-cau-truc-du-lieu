@@ -19,3 +19,4 @@ void inputStack(Stack& stack);
 void outputStack(Stack stack);
 int pop(Stack& stack);
 int top(Stack stack);
+int sum(Stack stack);
