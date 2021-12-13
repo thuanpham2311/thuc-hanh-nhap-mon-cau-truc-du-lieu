@@ -19,6 +19,19 @@ int main() {
 
   cout << "\n tổng phần tử lẽ = " << xuatTongPhanTuLe(list) << endl;
 
+  // Nodeptr chan, le;
+
+  // khoiTao(chan);
+  // khoiTao(le);
+
+  // tachDaySoChanLe(list, chan, le);
+
+  // xuatDanhSach(chan);
+  // xuatDanhSach(le);
+
+  deleteAllX(list, 1);
+  xuatDanhSach(list);
+
   giaiPhong(list);
   return 0;
 }

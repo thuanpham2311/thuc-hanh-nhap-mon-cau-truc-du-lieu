@@ -137,3 +137,32 @@ int xuatTongPhanTuLe(Nodeptr list) {
   }
   return sum;
 }
+
+void tachDaySoChanLe(Nodeptr input, Nodeptr &chan, Nodeptr &le) {
+  Nodeptr p = input;
+
+  khoiTao(chan);
+  khoiTao(le);
+
+  while (p != NULL) {
+    if (p->data % 2 != 0) {
+      themCuoi(le, p->data);
+    } else {
+      themCuoi(chan, p->data);
+    }
+    p = p->link;
+  }
+}
+
+void deleteAllX(Nodeptr list, TYPEINFO x) {
+  Nodeptr p = list;
+
+  while (p != NULL) {
+    if (p->data == x) {
+      p = p->link;
+      delete p;
+    } else {
+      p = p->link;
+    }
+  }
+}

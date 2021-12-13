@@ -25,3 +25,5 @@ void xoaDau(Nodeptr& list);
 void xuatCacSoChiaHetCho3(Nodeptr list);
 int xuatTong(Nodeptr list);
 int xuatTongPhanTuLe(Nodeptr list);
+void tachDaySoChanLe(Nodeptr input, Nodeptr& chan, Nodeptr& le);
+void deleteAllX(Nodeptr list, TYPEINFO x);
