@@ -2,34 +2,23 @@
 
 int main() {
   Nodeptr list;
-  // khoiTao(list);
-  // int x;
-  // cout << "x = ";
-  // cin >> x;
-  // themDau(list, x);
-  // xuatDanhSach(list);
-  // nhapDanhSachThemDau(list);
-  // xuatDanhSach(list);
 
   khoiTao(list);
 
   nhapDanhSachThemCuoi(list);
   xuatDanhSach(list);
 
-  // int x;
-  // cout << "\n Nhập phần tử cần tìm: ";
-  // cin >> x;
-  // if (timPhanTu(list, x) != NULL) {
-  // cout << "\nTìm thấy " << x << " ở địa chỉ: " << timPhanTu(list, x) << endl;
-  // } else {
-  // cout << "\nKhông tìm thấy phần tử\n";
-  // }
+  cout << "\nXóa đầu";
+  xoaDau(list);
+  xuatDanhSach(list);
 
-  // xoaDau(list);
-  // xuatDanhSach(list);
+  cout << "\ncac so chi het cho 3: ";
+  xuatCacSoChiaHetCho3(list);
 
-  cout << "test: ";
-  test(list);
+  cout << "\ntổng phần tử = " << xuatTong(list) << endl;
 
+  cout << "\n tổng phần tử lẽ = " << xuatTongPhanTuLe(list) << endl;
+
+  giaiPhong(list);
   return 0;
 }

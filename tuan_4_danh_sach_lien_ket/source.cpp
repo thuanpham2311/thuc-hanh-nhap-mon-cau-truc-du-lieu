@@ -4,6 +4,15 @@ void khoiTao(Nodeptr &list) { list = NULL; }
 
 int isEmpty(Nodeptr list) { return (list == NULL ? true : false); }
 
+void giaiPhong(Nodeptr &list) {
+  Nodeptr p = list;
+  while (p != NULL) {
+    list = list->link;
+    delete p;
+    p = list;
+  }
+}
+
 Nodeptr taoNode(TYPEINFO x) {
   Nodeptr p;
   p = new Node;
@@ -19,6 +28,22 @@ Nodeptr themDau(Nodeptr &list, TYPEINFO x) {
   p->link = list;
   list = p;
 
+  return p;
+}
+
+Nodeptr themCuoi(Nodeptr &list, TYPEINFO x) {
+  Nodeptr p = list;
+  p = taoNode(x);
+  if (isEmpty(list) == true) {
+    list = p;
+
+  } else {
+    Nodeptr q = list;
+    while (q->link != NULL) {
+      q = q->link;
+    }
+    q->link = p;
+  }
   return p;
 }
 
@@ -43,19 +68,6 @@ void xuatDanhSach(Nodeptr list) {
     cout << p->data << " ";
     p = p->link;
   }
-}
-
-Nodeptr themCuoi(Nodeptr &list, TYPEINFO x) {
-  Nodeptr p;
-  p = taoNode(x);
-  if (isEmpty(list) == true)
-    list = p;
-  else {
-    Nodeptr q = list;
-    while (q->link != NULL) q = q->link;
-    q->link = p;
-  }
-  return p;
 }
 
 void nhapDanhSachThemCuoi(Nodeptr &list) {
@@ -84,7 +96,7 @@ Nodeptr timPhanTu(Nodeptr list, TYPEINFO x) {
 }
 
 void xoaDau(Nodeptr &list) {
-  Nodeptr p;
+  Nodeptr p = list;
   if (isEmpty(list) == false) {
     p = list;
     list = p->link;
@@ -92,14 +104,36 @@ void xoaDau(Nodeptr &list) {
   }
 }
 
-void test(Nodeptr list) {
+void xuatCacSoChiaHetCho3(Nodeptr list) {
   Nodeptr p = list;
-
-  while (isEmpty(p) == false) {
+  while (p != NULL) {
     if (p->data % 3 == 0) {
-      cout << p->data;
+      cout << p->data << "\t";
     }
-
     p = p->link;
   }
+}
+
+int xuatTong(Nodeptr list) {
+  TYPEINFO sum = 0;
+  Nodeptr p = list;
+
+  while (p != NULL) {
+    sum += p->data;
+    p = p->link;
+  }
+  return sum;
+}
+
+int xuatTongPhanTuLe(Nodeptr list) {
+  TYPEINFO sum = 0;
+  Nodeptr p = list;
+
+  while (p != NULL) {
+    if (p->data % 2 != 0) {
+      sum += p->data;
+    }
+    p = p->link;
+  }
+  return sum;
 }
