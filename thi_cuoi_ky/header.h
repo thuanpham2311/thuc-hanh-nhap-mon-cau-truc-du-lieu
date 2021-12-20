@@ -17,4 +17,6 @@ NODEPTR themDau(NODEPTR& list, TYPEINFO x);
 void nhapDanhSachThemDau(NODEPTR& list);
 void xuatDanhSach(NODEPTR list);
 void capNhatGiaTriChanSang0(NODEPTR& list);
-int tongPhanTuNhoHonX(NODEPTR list, TYPEINFO x);
+TYPEINFO xuatTongPhanTuNhoHonX(NODEPTR list, TYPEINFO x);
+int xuatViTriCuaX(NODEPTR list, TYPEINFO x);
+bool kiemTraGiamDan(NODEPTR list);

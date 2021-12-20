@@ -64,10 +64,48 @@ void capNhatGiaTriChanSang0(NODEPTR &list) {
   }
 }
 
-int tongPhanTuNhoHonX(NODEPTR list, TYPEINFO x) {
-  int sum = 0;
+TYPEINFO xuatTongPhanTuNhoHonX(NODEPTR list, TYPEINFO x) {
   NODEPTR p = list;
-  while (p->k != x) {
-    if (p->k ==) }
+  TYPEINFO sum = 0;
+
+  while (isEmpty(p) == false) {
+    if (p->k < x) {
+      sum += p->k;
+    }
+    p = p->link;
+  }
   return sum;
+}
+
+int xuatViTriCuaX(NODEPTR list, TYPEINFO x) {
+  NODEPTR p = list;
+  int location = 0;
+  bool flag = false;
+
+  while (flag == false) {
+    location++;
+    if (p->k == x) {
+      flag = true;
+    }
+    p = p->link;
+  }
+
+  return location;
+}
+
+bool kiemTraGiamDan(NODEPTR list) {
+  NODEPTR p = list;
+
+  TYPEINFO tmp = p->k;
+  p = p->link;
+
+  while (isEmpty(p) == false) {
+    if (tmp < p->k) {
+      return false;
+    } else {
+      tmp = p->k;
+      p = p->link;
+    }
+  }
+  return true;
 }
