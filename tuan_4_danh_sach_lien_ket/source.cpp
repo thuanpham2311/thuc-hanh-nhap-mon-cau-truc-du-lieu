@@ -36,7 +36,6 @@ Nodeptr themCuoi(Nodeptr &list, TYPEINFO x) {
   p = taoNode(x);
   if (isEmpty(list) == true) {
     list = p;
-
   } else {
     Nodeptr q = list;
     while (q->link != NULL) {
