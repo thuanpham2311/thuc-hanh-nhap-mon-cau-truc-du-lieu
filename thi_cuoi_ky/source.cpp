@@ -74,6 +74,7 @@ TYPEINFO xuatTongPhanTuNhoHonX(NODEPTR list, TYPEINFO x) {
     }
     p = p->link;
   }
+
   return sum;
 }
 
